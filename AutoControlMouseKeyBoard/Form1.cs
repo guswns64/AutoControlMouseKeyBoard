@@ -50,9 +50,9 @@ namespace AutoControlMouseKeyBoard
 
             //AutoUpScalingImage upScalingImage = new AutoUpScalingImage();
             //AutoGetSeaArtImage autoGetPikaImage = new AutoGetSeaArtImage();
-            //AutoGetBingImage autoGetBingImage = new AutoGetBingImage();
+            AutoGetBingImage autoGetBingImage = new AutoGetBingImage();
 
-            SimpleTool simpleTool = new SimpleTool();
+            //SimpleTool simpleTool = new SimpleTool();
             //autoMouseGetPos();
             //autoImageCreateMode();
             //autoImageUpScaling();
