@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AutoControlMouseKeyBoard
-{
-    internal class SimpleTool
-    {
-        public SimpleTool() 
-        {
-            String[] imgTextArr2 = {
+﻿String[] imgTextArr2 = {
                                     "푹신한 눈이 내리는 소나무 숲에서 크리스마스 캐럴 소리와 함께 누운 이불의 온기를 느끼는 공간",
 "따스한 벽난로 앞에서 책과 함께 즐기는 평화로운 크리스마스 휴식",
 "도심의 작은 공원에서 반짝이는 크리스마스 조명 아래 누운 이불 위에서의 힐링",
@@ -42,65 +30,3 @@ namespace AutoControlMouseKeyBoard
 "도심 속 작은 카페에서 크리스마스 음악과 함께 차 한 잔의 휴식",
 "해가 지는 도시 공원에서 크리스마스 불빛이 비추는 누운 이불의 평화로운 힐링",
             };
-            createStrListWithoutDuplicate(imgTextArr2);
-        }
-        public void checkDuplicate(String[] strArr)
-        {
-            Console.WriteLine("제시된 문자 배열 길이 : " + strArr.Length);
-
-            int duplicateCount = 0;
-            string targetStr;
-            string otherStr;
-            for (int i = 0; i < strArr.Length; i++)
-            {
-                targetStr = strArr[i];
-                for (int m = (i + 1); m < strArr.Length; m++)
-                {
-                    otherStr = strArr[m];
-                    if (targetStr == otherStr)
-                    {
-                        Console.WriteLine("아래 글은 서로 중복" + "count : " + (++duplicateCount));
-                        Console.WriteLine("targetStr : " + targetStr);
-                        Console.WriteLine("otherStr : " + otherStr);
-                    }
-                }
-            }
-
-        }
-
-        public void createStrListWithoutDuplicate(String[] strArr)
-        {
-            List<string> stringList = new List<string>();
-            string targetStr;
-            for (int i = 0; i < strArr.Length; i++)
-            {
-                targetStr = strArr[i];
-
-                if(checkDuplicateStrInList(targetStr, stringList) == true)
-                {
-                    continue;
-                }
-                else
-                {
-                    stringList.Add(targetStr);
-                }
-            }
-
-            Console.WriteLine("완성된 list");
-            foreach (string listStr in stringList)
-            {
-                Console.WriteLine("\"" + listStr + "\",");
-            }
-        }
-
-        private bool checkDuplicateStrInList(string targetStr, List<string> stringList)
-        {
-            foreach (string listStr in stringList)
-            {
-                if (targetStr == listStr) return true;
-            }
-            return false;
-        }
-    }
-
-}
