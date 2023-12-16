@@ -451,7 +451,7 @@ namespace AutoControlMouseKeyBoard
                     Console.WriteLine("파일 이름을 성공적으로 변경했습니다.");
                 }
 
-                System.Threading.Thread.Sleep(1000);
+                System.Threading.Thread.Sleep(5000);
 
                 files = Directory.GetFiles(folderPath);
                 foreach (string moveFile in files)
