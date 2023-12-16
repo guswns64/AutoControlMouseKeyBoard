@@ -48,7 +48,11 @@ namespace AutoControlMouseKeyBoard
         {
             printText("excute init");
 
-            AutoUpScalingImage upScalingImage = new AutoUpScalingImage(32);
+            //AutoUpScalingImage upScalingImage = new AutoUpScalingImage();
+            //AutoGetSeaArtImage autoGetPikaImage = new AutoGetSeaArtImage();
+            //AutoGetBingImage autoGetBingImage = new AutoGetBingImage();
+
+            SimpleTool simpleTool = new SimpleTool();
             //autoMouseGetPos();
             //autoImageCreateMode();
             //autoImageUpScaling();
